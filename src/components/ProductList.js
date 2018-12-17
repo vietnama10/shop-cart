@@ -1,19 +1,39 @@
-import React from 'react';
-import ProductItem from './ProductItem';
 
-const ProductList = ({products}) => {
-  const productList = products.map((product, i) => {
-    return (
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import ProductItem from './Product';
+import { fetchProducts_Request } from './../actions/index'
+
+class ProductList extends Component {
+  componentDidMount() {
+    this.props.fetchAllProduct();
+  }
+
+  productList = () => {
+    var { products } = this.props;
+    return products.map((product, i) => {
+      return (
         <ProductItem product={product} key={i} />
-    )
-  })
-
-
-  return (
-    <div className="row product-list">
-      {productList}
-    </div>
-  )
+      )
+    })
+  }
+  render() {
+    return (
+      <div className="container">
+        <div className="row product-list">
+          {this.productList()}
+        </div>
+      </div>
+    );
+  }
 }
+const mapStateToProps = (state) => ({
+  products: state.products
+})
 
-export default ProductList;
+const mapDispatchToProps = (dispatch) => ({
+  fetchAllProduct: () => dispatch(fetchProducts_Request())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductList)
+// export default ProductList;
