@@ -1,19 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import * as ProductActions from '../actions';
 import { bindActionCreators } from 'redux';
 import ProductList from '../components/ProductList';
 
-class ProductsContainer extends Component {
+class Products extends Component {
+
   componentDidMount() {
-    console.log("didmount");
+    this.props.actions.fetchProducts_Request();
   }
+
   render() {
-    return <ProductList />
+    return (
+      <ProductList products={this.props.products} actions={this.props.actions}/>
+    )
   }
 }
+
 const mapStateToProps = state => ({
-  products: state.products,
+  products: state.products
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -23,4 +28,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ProductsContainer)
+)(Products)

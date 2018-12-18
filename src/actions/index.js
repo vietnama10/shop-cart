@@ -1,8 +1,10 @@
-import * as types from '../constants/ProductActionTypes';
-import { request } from './../api/productApi';
+import * as types from '../constants/ActionTypes';
+import { request } from '../utils/apiCaller';
+import {products} from '../constants/apiURL';
+
 export const fetchProducts_Request = () => {
   return dispatch => {
-    return request('http://localhost:3000/products').then(res => {
+    return request(products, {method: 'GET'}).then(res => {
       dispatch (fetchProducts(res));
     })
   }
@@ -22,4 +24,8 @@ export const deleteProducts = ids => ({
 
 export const editProduct = (id, product) => ({
   type: types.EDIT_PRODUCT, id, product
+})
+
+export const addToCart = (item, quanty) => ({
+  type: types.ADD_TO_CART, item, quanty
 })
