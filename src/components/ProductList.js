@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 import ProductItem from './Product';
 
 const ProductList = ({products, actions}) => {
-  const productList = products.map((product, i) => {
+  const productList = products.map((product) => {
     return (
-        <ProductItem product={product} key={i} />
+        <ProductItem product={product} key={product.id} />
     )
   })
 

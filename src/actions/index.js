@@ -26,6 +26,10 @@ export const editProduct = (id, product) => ({
   type: types.EDIT_PRODUCT, id, product
 })
 
-export const addToCart = (item, quanty) => ({
-  type: types.ADD_TO_CART, item, quanty
+export const addToCart = (item, qty) => ({
+  type: types.ADD_TO_CART, item, qty
+})
+
+export const removeCartItem = (itemId) => ({
+  type: types.REMOVE_CART_ITEM, itemId
 })

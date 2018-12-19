@@ -1,4 +1,5 @@
 import React from 'react'
+import CartContainer from '../../containers/Cart'
 
 const Header = () => {
   return (
@@ -27,13 +28,7 @@ const Header = () => {
             <a className="nav-link" href="#">Fashion</a>
           </li>
         </ul>
-        
-        <a className="nav-link shopping-cart" href="#">
-          <i className="fas fa-shopping-basket">
-            <span className="shop-item-count">0</span>
-          </i>
-        </a>
-        
+        <CartContainer />
       </div>
     </nav>
   )

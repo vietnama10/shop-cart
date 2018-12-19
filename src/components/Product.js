@@ -10,7 +10,7 @@ const ProductItem = ({product, onAddToCart}) => {
           <img className="card-img-top" alt={product.name} src={product.imgUrl}></img>
           <div className="card-body">
             <h6 className="card-title">{product.name}</h6>
-            <p className="card-text">{product.price}</p>
+            <p className="card-text">${product.price}</p>
             <button onClick={() => onAddToCart.addToCart(product, 1)} className="btn btn-primary card-action">Add</button>
           </div>
         </div>
