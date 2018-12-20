@@ -19,17 +19,17 @@ const CartItem = ({cartItem, onRemoveCartItem}) => {
   )
 }
 
-const mapStateToProps = state => ({
+// const mapStateToProps = state => ({
 
-})
+// })
 
-const mapDispatchToProps = dispatch => ({
-  onRemoveCartItem: bindActionCreators({removeCartItem}, dispatch)
-})
+// const mapDispatchToProps = dispatch => ({
+//   onRemoveCartItem: bindActionCreators({removeCartItem}, dispatch)
+// })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(CartItem)
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps,
+// )(CartItem)
 
-// export default CartItem
+export default CartItem

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import {addToCart} from '../actions';
-import { bindActionCreators } from 'redux';
 import Cart from '../components/Cart';
+import {removeCartItem} from '../actions';
+import { bindActionCreators } from 'redux';
 
 class CartContainer extends Component {
 
@@ -22,18 +22,19 @@ class CartContainer extends Component {
             <span className="shop-item-count">{this.countItem(this.props.cart)}</span>
           </i>
         </a>
-        <Cart cart={this.props.cart}/>
+        <Cart cart={this.props.cart} onRemoveCartItem={this.props.onRemoveCartItem}/>
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  cart: state.cart
+  cart: state.cart,
+  
 })
 
 const mapDispatchToProps = dispatch => ({
- 
+  onRemoveCartItem: bindActionCreators({removeCartItem}, dispatch)
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartContainer)

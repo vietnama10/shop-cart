@@ -1,12 +1,12 @@
 import React from 'react';
 import CartItem from './CartItem';
 
-const Cart = ({cart}) => {
+const Cart = ({cart, onRemoveCartItem}) => {
   let totalAmount = 0;
   const cartItems = cart.map(cartItem => {
     totalAmount += Math.round(cartItem.price * cartItem.qty * 1000) / 1000;
     return (
-      <CartItem cartItem={cartItem} key={cartItem.id}/>
+      <CartItem cartItem={cartItem} onRemoveCartItem={onRemoveCartItem} key={cartItem.id}/>
     )
   })
   return(
@@ -20,9 +20,9 @@ const Cart = ({cart}) => {
         </li>
         {cartItems}
       </ol>
-      <div className="cart-total row">
+      <div className="cart-total row container">
           <strong className="col col-sm-5">TotalAmount: </strong>
-          <strong className="col col-sm-7">${totalAmount}</strong>
+          <strong className="col col-sm-7 text-right">${totalAmount}</strong>
       </div>
     </div>
   )

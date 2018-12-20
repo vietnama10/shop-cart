@@ -3,15 +3,7 @@ import {
   REMOVE_CART_ITEM
 } from '../constants/ActionTypes';
 
-const initState = [
-  {
-    "id": 5,
-    "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
-    "name": "'70s RETRO GLAM KEFIAH",
-    "price": 20,
-    "qty": 1
-  }
-]
+const initState = [];
 const cart = (state = initState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
@@ -34,7 +26,7 @@ const handleAddToCart = (addItem, qty, state) => {
   })
   if(exitsItemIndex !== null) {
     state[exitsItemIndex].qty += qty;
-    return state;
+    return [...state];
   } else {
     addItem["qty"] = qty;
     state.push(addItem);
@@ -43,10 +35,9 @@ const handleAddToCart = (addItem, qty, state) => {
 }
 
 const handleRemoveCartItem = (itemId, state) => {
-  let exitsItemIndex = null;
   state.map((item, i) => {
     if(item.id === itemId) {
-      state.splice(i);
+      state.splice(i, 1);
     }
   })
   return state;
