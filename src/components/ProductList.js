@@ -4,7 +4,10 @@ import ProductItem from './Product';
 const ProductList = ({products, actions}) => {
   const productList = products.map((product) => {
     return (
-        <ProductItem product={product} key={product.id} />
+        <ProductItem 
+          product={product} key={product.id} 
+          onAddToCart={() => actions.addToCart(product, 1)}
+        />
     )
   })
 

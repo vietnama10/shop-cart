@@ -32,5 +32,17 @@ $color-dark: #343a40;
   -moz-box-shadow: $h_offset $v_offset $blur $spread $color;
 }
 
+@mixin button-style($padding, $background, $font-size, $color) {
+  padding: $padding;
+  background-color: $background;
+  text-align: center;
+  font-size: $font-size;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  color: $color;
+  font-weight: 700;
+}
+
 @import '_header';
 @import '_product';

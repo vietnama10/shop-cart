@@ -8,7 +8,7 @@ class CartContainer extends Component {
 
   countItem = cart => {
     let itemNumber = 0;
-    cart.map(item => {
+    cart.forEach(item => {
       itemNumber += item.qty;
     })
     return itemNumber;
@@ -17,7 +17,7 @@ class CartContainer extends Component {
   render() {
     return (
       <div className="cart-container">
-        <a className="nav-link shopping-cart" href="#">
+        <a className="nav-link shopping-cart" href="#a">
           <i className="fas fa-shopping-basket">
             <span className="shop-item-count">{this.countItem(this.props.cart)}</span>
           </i>

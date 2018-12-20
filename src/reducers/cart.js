@@ -19,9 +19,10 @@ const cart = (state = initState, action) => {
 
 const handleAddToCart = (addItem, qty, state) => {
   let exitsItemIndex = null;
-  state.map((item, i) => {
+  state.forEach((item, i) => {
     if(item.id === addItem.id) {
       exitsItemIndex = i;
+      return false;
     }
   })
   if(exitsItemIndex !== null) {
@@ -35,9 +36,10 @@ const handleAddToCart = (addItem, qty, state) => {
 }
 
 const handleRemoveCartItem = (itemId, state) => {
-  state.map((item, i) => {
+  state.forEach((item, i) => {
     if(item.id === itemId) {
       state.splice(i, 1);
+      return false
     }
   })
   return state;
