@@ -3,7 +3,7 @@ import CartContainer from '../../containers/Cart'
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <a className="navbar-brand" href="#a">
         <img className="logo" src="https://www.lancome.vn/wp-content/themes/lancome2018/images/logo.png" alt="Logo" />
       </a>
