@@ -5,10 +5,7 @@
   }
   .card-body {
     .card-action {
-      background-color: $color-pink;
-      border: none;
-      border-radius: 0;
-      outline: none;
+      @include button-style(10px 15px, $color-pink-dark, 12px, $color-white);
     }
   }
 }

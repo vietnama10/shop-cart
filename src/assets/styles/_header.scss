@@ -30,7 +30,7 @@
             right: -12px;
             top: -12px;
             border-radius: 20px;
-            background: $color-pink;
+            background: $color-pink-dark;
             width: 20px;
             height: 20px;
             text-align: center;
@@ -121,7 +121,7 @@
             margin: auto 0 0 0;
           }
           .btn-checkout {
-            @include button-style(5px, $color-pink, 12px, $color-white);
+            @include button-style(5px, $color-pink-dark, 12px, $color-white);
           }
           strong {
             color: $color-dark;
@@ -130,8 +130,4 @@
       }
     }
   }
-}
-
-.products-container {
-  margin-top: 90px;
 }
