@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import Cart from '../components/Cart';
 import {removeCartItem} from '../actions';
 import { bindActionCreators } from 'redux';
 
-class CartContainer extends Component {
+class Cart extends Component {
 
   countItem = cart => {
     let itemNumber = 0;
@@ -17,12 +16,7 @@ class CartContainer extends Component {
   render() {
     return (
       <div className="cart-container">
-        <a className="nav-link shopping-cart" href="#a">
-          <i className="fas fa-shopping-basket">
-            <span className="shop-item-count">{this.countItem(this.props.cart)}</span>
-          </i>
-        </a>
-        <Cart cart={this.props.cart} onRemoveCartItem={this.props.onRemoveCartItem}/>
+        <h1>Your cart is having {this.countItem(this.props.cart)} for now!</h1>
       </div>
     )
   }
@@ -37,4 +31,4 @@ const mapDispatchToProps = dispatch => ({
   onRemoveCartItem: bindActionCreators({removeCartItem}, dispatch)
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)

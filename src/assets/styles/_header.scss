@@ -7,7 +7,7 @@
   }
   #navbarNav {
     .navbar-nav {
-      margin: auto auto auto 50px;
+      margin: auto auto auto 15px;
       .nav-item {
         text-transform: uppercase;
         :hover {
@@ -15,7 +15,7 @@
         }
       }
     }
-    .cart-container {
+    .mini-cart-container {
       position: relative;
       &:hover > .cart-info{
         visibility: visible;
@@ -121,7 +121,8 @@
             margin: auto 0 0 0;
           }
           .btn-checkout {
-            @include button-style(5px, $color-pink-dark, 12px, $color-white);
+            text-decoration: none;
+            @include button-style(10px 15px, $color-pink-dark, 12px, $color-white);
           }
           strong {
             color: $color-dark;

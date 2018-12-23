@@ -1,12 +1,13 @@
 import React from 'react';
-import CartItem from './CartItem';
+import MiniCartItem from './MiniCartItem';
+import {Link} from 'react-router-dom';
 
 const Cart = ({cart, onRemoveCartItem}) => {
   let totalAmount = 0;
   const cartItems = cart.length > 0 ? (cart.map(cartItem => {
     totalAmount += Math.round(cartItem.price * cartItem.qty * 1000) / 1000;
     return (
-      <CartItem 
+      <MiniCartItem 
         cartItem={cartItem} 
         onRemoveCartItem={onRemoveCartItem} 
         key={cartItem.id}
@@ -21,7 +22,7 @@ const Cart = ({cart, onRemoveCartItem}) => {
       </ol>
       <div className="cart-total row container">
           <strong className="col col-sm-8">Subtotal: ${totalAmount}</strong>
-          <button className="col col-sm-4 btn-checkout">CHECK OUT</button>
+          <Link to="/cart" exact="true" className="col col-sm-4 btn-checkout">CHECK OUT</Link>
       </div>
     </div>
   )

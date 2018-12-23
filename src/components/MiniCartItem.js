@@ -7,12 +7,12 @@ const CartItem = ({cartItem, onRemoveCartItem}) => {
       <span className="col col-sm-3 item-image">
         <img className="col col-sm-12" src={cartItem.imgUrl} alt={cartItem.name}/>
       </span>
-      <span className="col col-sm-7 item-name">
+      <span className="col col-sm-8 item-name">
         {cartItem.name}<br/>
         <small>{cartItem.qty} x ${cartItem.price}</small>
       </span>
       <a 
-        className="col col-sm-2 item-action" 
+        className="col col-sm-1 item-action" 
         onClick={() => onRemoveCartItem.removeCartItem(cartItem.id)}
         href="#a"
       >

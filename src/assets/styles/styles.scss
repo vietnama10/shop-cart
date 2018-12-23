@@ -38,20 +38,31 @@ $desktop-width: 1024px;
   -moz-box-shadow: $h_offset $v_offset $blur $spread $color;
 }
 
+@mixin box-shadow-2layer(
+  $h_offset, $v_offset, $blur, $spread, $color,
+  $h_offset2, $v_offset2, $blur2, $spread2, $color2
+  ) {
+  box-shadow: $h_offset $v_offset $blur $spread $color, $h_offset2 $v_offset2 $blur2 $spread2 $color2;
+  -webkit-box-shadow: $h_offset $v_offset $blur $spread $color, $h_offset2 $v_offset2 $blur2 $spread2 $color2;
+  -moz-box-shadow: $h_offset $v_offset $blur $spread $color, $h_offset2 $v_offset2 $blur2 $spread2 $color2;
+}
+
 @mixin button-style($padding, $background, $font-size, $color) {
   padding: $padding;
   background-color: $background;
   text-align: center;
   font-size: $font-size;
   border: none !important;
-  box-shadow: none !important;
   outline: none !important;
   color: $color;
   font-weight: 700;
   border-radius: unset !important;
   &:hover {
-    background-color: $color-pink;
     cursor: pointer;
+    box-shadow: inset 0px 0px 0px 3px $color-pink-dark, inset 0px 0px 0px 6px $color-white;
+  }
+  &:focus {
+    box-shadow: none;
   }
 }
 
@@ -73,6 +84,7 @@ $desktop-width: 1024px;
 
 
 #main-content {
+  min-height: 300px;
   margin-top: 90px;
   margin-bottom: 20px;
 }
