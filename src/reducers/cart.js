@@ -17,7 +17,7 @@ const cart = (state = initState, action) => {
   }
 }
 
-const handleAddToCart = (addItem, qty, state) => {
+const handleAddToCart = (addItem, qty, state, e) => {
   let exitsItemIndex = null;
   state.forEach((item, i) => {
     if(item.id === addItem.id) {
