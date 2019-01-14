@@ -5,7 +5,7 @@ import {removeCartItem} from '../actions';
 import { bindActionCreators } from 'redux';
 import {Link} from 'react-router-dom';
 
-class CartContainer extends Component {
+class MiniCartContainer extends Component {
 
   countItem = cart => {
     let itemNumber = 0;
@@ -38,4 +38,4 @@ const mapDispatchToProps = dispatch => ({
   onRemoveCartItem: bindActionCreators({removeCartItem}, dispatch)
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(CartContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(MiniCartContainer)

@@ -1,0 +1,58 @@
+.cart-container {
+  @include cart-list(auto, auto, auto);
+  .cart-list {
+    border: none;
+  }
+  .checkout-info {
+    .cart-total {
+      padding: 0 20px 20px 20px;
+      border: solid 1px $color-gray-light;
+      .title {
+        text-align: center;
+      }
+      .devider {
+        text-align: center;
+        position: relative;
+        span {
+          background: #fff;
+          font-size: 14px;
+          font-weight: 300;
+          padding: 0 10px;
+        }
+        &:before {
+          content: "";
+          height: 1px;
+          width: 100%;
+          background-color: $color-gray-light;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          z-index: -1;
+        }
+      }
+      .table-total {
+        width: 100%;
+        tbody tr td:last-child{
+          text-align: right;
+        }
+      }
+      .checkout-secure {
+        @include button-style(10px 15px, $color-pink-dark, 12px, $color-white);
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+      .checkout-paypal {
+        background-image: url(../images/paypal.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40%;
+        text-indent: -9999px;
+        // box-shadow: unset !important;
+        @include button-style(10px 15px, $color-gray-light, 12px, $color-white);
+      }
+      .total span::last-child {
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

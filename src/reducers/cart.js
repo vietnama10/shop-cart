@@ -27,12 +27,25 @@ const handleAddToCart = (addItem, qty, state) => {
   })
   if(exitsItemIndex !== null) {
     state[exitsItemIndex].qty += qty;
+    let imgAnimation = document.getElementById("addtocart-" + addItem.id);
+    imgAnimation.classList.add("adding");
+    let productItem = document.getElementById("addtocart-" + addItem.id).parentNode;
+    let imgAnimationClone = document.getElementById("addtocart-" + addItem.id).cloneNode(true);
+    imgAnimation.parentNode.removeChild(imgAnimation);
+    productItem.appendChild(imgAnimationClone);
     return [...state];
   } else {
     addItem["qty"] = qty;
     state.push(addItem);
+    let imgAnimation = document.getElementById("addtocart-" + addItem.id);
+    imgAnimation.classList.add("adding");
+    let productItem = document.getElementById("addtocart-" + addItem.id).parentNode;
+    let imgAnimationClone = document.getElementById("addtocart-" + addItem.id).cloneNode(true);
+    imgAnimation.parentNode.removeChild(imgAnimation);
+    productItem.appendChild(imgAnimationClone);
     return state;
   }
+  
 }
 
 const handleRemoveCartItem = (itemId, state) => {

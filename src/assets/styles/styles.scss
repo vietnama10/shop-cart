@@ -59,7 +59,7 @@ $desktop-width: 1024px;
   border-radius: unset !important;
   &:hover {
     cursor: pointer;
-    box-shadow: inset 0px 0px 0px 3px $color-pink-dark, inset 0px 0px 0px 6px $color-white;
+    box-shadow: inset 0px 0px 0px 3px $background, inset 0px 0px 0px 6px $color-white;
   }
   &:focus {
     box-shadow: none;
@@ -91,4 +91,5 @@ $desktop-width: 1024px;
 
 @import '_header';
 @import '_product';
+@import '_cart';
 @import '_footer';

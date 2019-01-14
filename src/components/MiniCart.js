@@ -22,7 +22,7 @@ const Cart = ({cart, onRemoveCartItem}) => {
       </ol>
       <div className="cart-total row container">
           <strong className="col col-sm-8">Subtotal: ${totalAmount}</strong>
-          <Link to="/cart" exact="true" className="col col-sm-4 btn-checkout">CHECK OUT</Link>
+          <Link to="/cart" exact="true" className="btn col col-sm-4 btn-checkout">CHECK OUT</Link>
       </div>
     </div>
   )

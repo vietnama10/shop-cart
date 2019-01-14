@@ -1,3 +1,52 @@
+@mixin cart-list($min-height, $max-height, $height) {
+  .cart-list {
+    overflow-x: hidden;
+    min-height: $min-height;
+    max-height: $max-height;
+    height: $height;
+    margin: 0 0 10px 0;
+    padding: 0;
+    border-bottom: solid 2px $color-dark;
+    &::-webkit-scrollbar {
+      @include scrollbar;
+    }
+    &::-webkit-scrollbar-track {
+      @include scrollbar-track();
+    }
+    &::-webkit-scrollbar-thumb {
+      @include scrollbar-thumb();
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      @include scrollbar-thumb-hover();
+    }
+    li {
+      margin: 5px 0 10px 0;
+      padding: 0 10px;
+      border-top: solid 1px $color-gray-light;
+      &:last-child {
+        border-bottom: solid 1px $color-gray-light;
+      }
+      * {
+        padding-left: 0;
+        margin: auto 0;
+      }
+      .item-action {
+        color: $color-dark;
+      }
+      .item-name {
+        small {
+          color: $color-gray;
+        }
+      }
+    }
+    .cart-empty {
+      line-height: 70px;
+      text-align: center;
+      color: $color-gray;
+    }
+  }
+}
+
 .navbar {
   box-shadow: 0px 0px 20px 0px $color-dark;
   .navbar-brand {
@@ -68,52 +117,7 @@
           color: #fff;
           right: 15px;
         }
-        .cart-list {
-          overflow-x: hidden;
-          min-height: 70px;
-          max-height: 350px;
-          height: 85%;
-          margin: 0 0 10px 0;
-          padding: 0;
-          border-bottom: solid 2px $color-dark;
-          &::-webkit-scrollbar {
-            @include scrollbar;
-          }
-          &::-webkit-scrollbar-track {
-            @include scrollbar-track();
-          }
-          &::-webkit-scrollbar-thumb {
-            @include scrollbar-thumb();
-          }
-          &::-webkit-scrollbar-thumb:hover {
-            @include scrollbar-thumb-hover();
-          }
-          li {
-            margin: 5px 0 10px 0;
-            padding: 0 10px;
-            border-top: solid 1px $color-gray-light;
-            &:last-child {
-              border-bottom: solid 1px $color-gray-light;
-            }
-            * {
-              padding-left: 0;
-              margin: auto 0;
-            }
-            .item-action {
-              color: $color-dark;
-            }
-            .item-name {
-              small {
-                color: $color-gray;
-              }
-            }
-          }
-          .cart-empty {
-            line-height: 70px;
-            text-align: center;
-            color: $color-gray;
-          }
-        }
+        @include cart-list(70px, 350px, 85%);
         .cart-total {
           margin: 0;
           * {
