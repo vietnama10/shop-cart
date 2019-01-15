@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import ProductItem from './Product';
+import ProductItem from './ProductItem';
 
 const ProductList = ({products, actions}) => {
   const productList = products.map((product) => {
