@@ -134,5 +134,27 @@
         }
       }
     }
+    .user-links {
+      .nav-link {
+        color: $color-white;
+      }
+      .links {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s;
+        margin: 0;
+        border-radius: unset;
+        border: solid 1px $color-gray-light;
+        @include box-shadow(0, 5px, 20px, 0, $color-dark);
+        a {
+          padding: 5px 20px;
+        }
+      }
+      &:hover > .links{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 }
