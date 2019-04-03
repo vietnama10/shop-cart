@@ -24,4 +24,14 @@
       z-index: -1;
     }
   }
+  .login-form {
+    #submitLogIn {
+      @include button-style(5px 15px, $color-pink-dark, 14px, $color-white);
+    }
+  }
+  .signin-form {
+    #submitSignIn {
+      @include button-style(5px 15px, $color-pink-dark, 14px, $color-white);
+    }
+  }
 }

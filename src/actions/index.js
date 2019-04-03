@@ -1,16 +1,16 @@
 import * as types from '../constants/ActionTypes';
 import { request } from '../utils/apiCaller';
-import {products} from '../constants/apiURL';
+import {products as productsApiUrl} from '../constants/apiURL';
 
 export const fetchProducts_Request = () => {
   return dispatch => {
-    return request(products, {method: 'GET'}).then(res => {
+    return request(productsApiUrl, {method: 'GET'}).then(res => {
       dispatch (fetchProducts(res));
     })
   }
 }
 
-export const fetchProducts = (products) => ({
+export const fetchProducts = products => ({
   type: types.FETCH_PRODUCTS, products
 })
 
@@ -30,6 +30,6 @@ export const addToCart = (item, qty) => ({
   type: types.ADD_TO_CART, item, qty
 })
 
-export const removeCartItem = (itemId) => ({
+export const removeCartItem = itemId => ({
   type: types.REMOVE_CART_ITEM, itemId
 })

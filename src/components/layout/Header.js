@@ -1,6 +1,6 @@
 import React from 'react'
 import MiniCartContainer from '../../containers/MiniCart';
-import UserContainer from '../../containers/UserLinks';
+import UserLinksContainer from '../../containers/UserLinks';
 import {Link} from 'react-router-dom';
 
 const Header = () => {
@@ -30,7 +30,7 @@ const Header = () => {
             <a className="nav-link" href="#a">Fashion</a>
           </li>
         </ul>
-        <UserContainer />
+        <UserLinksContainer />
         <MiniCartContainer />
       </div>
     </nav>
