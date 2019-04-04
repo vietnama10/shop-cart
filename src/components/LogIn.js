@@ -3,7 +3,7 @@ const Login = ({userLogIn, currentUser, history}) => {
   const onSubmitLogIn = (userName, passWord) => {
     userLogIn(userName, passWord, ()=>{
       currentUser(JSON.parse(localStorage.getItem('oauth')).access_token);
-      history.push("/profile");
+      history.push("/");
     });
   }
   

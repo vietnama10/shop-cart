@@ -2,7 +2,8 @@ import {
   USER_LOGIN
 } from '../constants/UserActionTypes';
 
-const initState = {}
+let localUser = JSON.parse(localStorage.getItem('user'));
+const initState = localUser ? {...localUser} : {};
 
 
 const user = (state = initState, action) => {

@@ -2,7 +2,7 @@ import * as types from '../constants/UserActionTypes';
 import { request } from '../utils/apiCaller';
 import {requestToken as loginApiUrl, currentUser as getCurrentUserApiUrl} from '../constants/apiURL';
 
-export const requestToken = (userName, passWord,fnc) => {
+export const requestToken = (userName, passWord, functionSetCurrentUser) => {
   return () => {
     return request(loginApiUrl, {
       method: 'POST',
@@ -13,8 +13,12 @@ export const requestToken = (userName, passWord,fnc) => {
       body: "username=" + userName + "&password=" + passWord + "&grant_type=password"
     }
     ).then(res => {
-      localStorage.setItem('oauth', JSON.stringify(res));
-      fnc();
+      if(res.error !== undefined) {
+        alert('Login fail!')
+      } else if(res.access_token !== undefined) {
+        localStorage.setItem('oauth', JSON.stringify(res));
+        functionSetCurrentUser();
+      }
     })
   }
 }

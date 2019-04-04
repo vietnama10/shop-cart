@@ -7,15 +7,11 @@ import {Redirect} from 'react-router-dom';
 
 class Oauth extends Component {
 
-  componentDidMount = (history) => {
-    let user = JSON.parse(localStorage.getItem('user'));
-    if(user) {
-      this.props.actions.userLogedIn(user);
-    }
+  componentDidMount = () => {
   }
 
-  userLogIn = (userName, passWord,fnc) => {
-    this.props.actions.requestToken(userName, passWord, fnc);
+  userLogIn = (userName, passWord, functionSetCurrentUser) => {
+    this.props.actions.requestToken(userName, passWord, functionSetCurrentUser);
   }
 
   currentUser = (token) => {
