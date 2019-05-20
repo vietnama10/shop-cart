@@ -16,7 +16,7 @@ export const requestToken = (userName, passWord, functionSetCurrentUser) => {
       if(res.error !== undefined) {
         alert('Login fail!')
       } else if(res.access_token !== undefined) {
-        localStorage.setItem('oauth', JSON.stringify(res));
+        localStorage.setItem('_lancome_shop_oauth', JSON.stringify(res));
         functionSetCurrentUser();
       }
     })
@@ -32,7 +32,7 @@ export const currentUser = (token) => {
       }
     }
     ).then(res => {
-      localStorage.setItem('user', JSON.stringify(res));
+      localStorage.setItem('_lancome_shop_user', JSON.stringify(res));
       dispatch (userLogedIn(res));
     })
   }

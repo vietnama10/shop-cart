@@ -2,8 +2,8 @@ import {
   FETCH_PRODUCTS
 } from '../constants/ActionTypes';
 
-const initState = []
 
+const initState = [];
 
 const products = (state = initState, action) => {
   switch (action.type) {

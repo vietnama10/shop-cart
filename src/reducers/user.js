@@ -2,7 +2,7 @@ import {
   USER_LOGIN
 } from '../constants/UserActionTypes';
 
-let localUser = JSON.parse(localStorage.getItem('user'));
+let localUser = JSON.parse(localStorage.getItem('_lancome_shop_user'));
 const initState = localUser ? {...localUser} : {};
 
 

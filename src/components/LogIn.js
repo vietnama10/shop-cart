@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 const Login = ({userLogIn, currentUser, history}) => {
   const onSubmitLogIn = (userName, passWord) => {
     userLogIn(userName, passWord, ()=>{
-      currentUser(JSON.parse(localStorage.getItem('oauth')).access_token);
+      currentUser(JSON.parse(localStorage.getItem('_lancome_shop_oauth')).access_token);
       history.push("/");
     });
   }

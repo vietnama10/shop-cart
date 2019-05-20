@@ -3,14 +3,18 @@ import {
   REMOVE_CART_ITEM
 } from '../constants/ActionTypes';
 
-const initState = [];
+let localCart = JSON.parse(localStorage.getItem('_lancome_shop_cart'));
+const initState = localCart ? [...localCart] : [];
+
 const cart = (state = initState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
       handleAddToCart(action.item, action.qty, state);
+      localStorage.setItem('_lancome_shop_cart', JSON.stringify(state));
       return [...state];
     case REMOVE_CART_ITEM:
       handleRemoveCartItem(action.itemId, state);
+      localStorage.setItem('_lancome_shop_cart', JSON.stringify(state));
       return [...state];
     default:
       return state;
