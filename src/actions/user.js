@@ -1,6 +1,6 @@
 import * as types from '../constants/UserActionTypes';
 import { request } from '../utils/apiCaller';
-import {requestToken as loginApiUrl, currentUser as getCurrentUserApiUrl} from '../constants/apiURL';
+import {requestToken as loginApiUrl, currentUser as getCurrentUserApiUrl} from '../apis/apiURL';
 
 export const requestToken = (userName, passWord, functionSetCurrentUser) => {
   return () => {
@@ -8,7 +8,7 @@ export const requestToken = (userName, passWord, functionSetCurrentUser) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Basic Y2xpZW50OjEyMzQ1Ng=='
+        'Authorization': 'Basic YnJvd3Nlcjo='
       },
       body: "username=" + userName + "&password=" + passWord + "&grant_type=password"
     }
@@ -37,6 +37,10 @@ export const currentUser = (token) => {
     })
   }
 }
+
+export const userLogedOut = () => ({
+  type: types.USER_LOGOUT
+})
 
 export const userLogedIn = (user) => ({
   type: types.USER_LOGIN, user

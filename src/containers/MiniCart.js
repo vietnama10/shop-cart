@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import MiniCart from '../components/MiniCart';
-import {removeCartItem} from '../actions';
+import {removeCartItem} from '../actions/cart';
 import { bindActionCreators } from 'redux';
 import {Link} from 'react-router-dom';
 
@@ -18,7 +18,7 @@ class MiniCartContainer extends Component {
   render() {
     return (
       <div className="mini-cart-container">
-        <Link to="/cart" className="nav-link shopping-cart">
+        <Link to="/cart" className="nav-link shopping-cart" onClick={(e) => e.preventDefault()}>
           <i className="fas fa-shopping-basket">
             <span className="shop-item-count">{this.countItem(this.props.cart)}</span>
           </i>
@@ -30,8 +30,7 @@ class MiniCartContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  cart: state.cart,
-  
+  cart: state.cart.items,
 })
 
 const mapDispatchToProps = dispatch => ({

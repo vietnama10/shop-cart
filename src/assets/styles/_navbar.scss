@@ -1,0 +1,219 @@
+@mixin cart-list($min-height, $max-height, $height) {
+  .cart-list {
+    overflow-x: hidden;
+    min-height: $min-height;
+    max-height: $max-height;
+    height: $height;
+    margin: 0 0 10px 0;
+    padding: 0;
+    border-bottom: solid 2px $color-dark;
+    &::-webkit-scrollbar {
+      @include scrollbar;
+    }
+    &::-webkit-scrollbar-track {
+      @include scrollbar-track();
+    }
+    &::-webkit-scrollbar-thumb {
+      @include scrollbar-thumb();
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      @include scrollbar-thumb-hover();
+    }
+    li {
+      margin: 5px 0 10px 0;
+      padding: 0 10px;
+      border-top: solid 1px $color-gray-light;
+      &:last-child {
+        border-bottom: solid 1px $color-gray-light;
+      }
+      * {
+        padding-left: 0;
+        margin: auto 0;
+      }
+      .item-action {
+        color: $color-dark;
+      }
+      .item-name {
+        small {
+          color: $color-gray;
+        }
+      }
+    }
+    .cart-empty {
+      line-height: 70px;
+      text-align: center;
+      color: $color-gray;
+    }
+  }
+}
+
+@mixin mini-cart-container {
+  position: relative;
+  &:hover > .cart-info{
+    visibility: visible;
+    opacity: 1;
+  }
+  .shopping-cart {
+    .fa-shopping-basket {
+      color: $color-white;
+      position: relative;
+      .shop-item-count {
+        position: absolute;
+        right: -12px;
+        top: -12px;
+        border-radius: 20px;
+        background: $color-pink-dark;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        color: $color-white;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+    .fa-caret-up {
+      position: absolute;
+      bottom: -10px;
+      left: 15px;
+      font-size: 25px;
+      color: $color-white;
+      z-index: 99;
+    }
+  }
+  .cart-info {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.4s linear, opacity 0.4s linear;
+    z-index: 98;
+    right: 0;
+    width: 350px;
+    background-color: $color-white;
+    padding: 10px;
+    border: solid 1px $color-gray-light;
+    @include box-shadow(0, 5px, 20px, 0, $color-dark);
+    .fa-caret-up {
+      position: absolute;
+      top: -15px;
+      font-size: 25px;
+      color: $color-white;
+      right: 15px;
+    }
+    @include cart-list(70px, 350px, 85%);
+    .cart-total {
+      margin: 0;
+      * {
+        padding-left: 0;
+        margin: auto 0 0 0;
+      }
+      .btn-checkout {
+        text-decoration: none;
+        @include button-style(10px 15px, $color-pink-dark, 12px, $color-white);
+      }
+      strong {
+        color: $color-dark;
+      }
+    }
+  }
+}
+@mixin user-links {
+  .nav-link {
+    color: $color-white;
+  }
+  .links {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+    margin: 0;
+    border-radius: unset;
+    border: solid 1px $color-gray-light;
+    @include box-shadow(0, 5px, 20px, 0, $color-dark);
+    .dropdown-item {
+      padding: 5px 20px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &:hover > .links{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/** Navbar Styles **/
+.navbar {
+  box-shadow: 0px 0px 10px 0px $color-dark;
+  .navbar-brand {
+    .logo {
+      width: 150px;
+    }
+  }
+  .nav-links-mobile {
+    display: flex;
+    .mini-cart-container {
+      @include mini-cart-container();
+    }
+    .user-links {
+      @include user-links();
+    }
+  }
+  #navbarNav {
+    .mini-cart-container {
+      @include mini-cart-container();
+    }
+    .user-links {
+      @include user-links();
+    }
+  }
+  #navbarNavMobile {
+    max-height: 300px;
+    overflow: auto;
+    transition: all .5s;
+    .nav-list {
+      .nav-item {
+        .nav-link {
+          color: $color-gray-light;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+        .nav-list {
+          transition: all .5s ease-in-out;
+          padding-left: 15px;
+          max-height: 0;
+          overflow: hidden;
+        }
+        &.dropdown{
+          position: relative;
+          &:after {
+            content: "\F067";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 700;
+            font-size: 20px;
+            display: block;
+            width: 50px;
+            height: 30px;
+            color: $color-gray-light;
+            position: absolute;
+            top: 5px;
+            right: 0;
+            z-index: 1;
+            line-height: 30px;
+            padding: 0 10px;
+            text-align: center;
+          }
+          &.expaned {
+            &:after {
+              content: "\F068";
+            }
+            >.nav-list {
+              max-height: 3000px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

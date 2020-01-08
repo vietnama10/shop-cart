@@ -1,0 +1,254 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/M63H24W7JF0-L302-ALTGHOST?wid=1500&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+      "name": "CHECK PRINT SHIRT",
+      "price": 110
+    },
+    {
+      "id": 2,
+      "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+      "name": "GLORIA HIGH LOGO SNEAKER",
+      "price": 91
+    },
+    {
+      "id": 3,
+      "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/HWVG6216060-TAN?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
+      "name": "CATE RIGID BAG",
+      "price": 94.5
+    },
+    {
+      "id": 4,
+      "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+      "name": "GUESS CONNECT WATCH",
+      "price": 438.9
+    },
+    {
+      "id": 5,
+      "imgUrl": "https://guesseu.scene7.com/is/image/GuessEU/AW6308VIS03-SAP?wid=700&amp;fmt=jpeg&amp;qlt=80&amp;op_sharpen=0&amp;op_usm=1.0,1.0,5,0&amp;iccEmbed=0",
+      "name": "70s RETRO GLAM KEFIAH",
+      "price": 20
+    },
+    {
+      "id": 6,
+      "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+      "name": "Nunc Facilisi",
+      "price": 400
+    },
+    {
+      "id": 7,
+      "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+      "name": "Accumsan Elit",
+      "price": 60
+    },
+    {
+      "id": 8,
+      "imgUrl": "http://guesseu.scene7.com/is/image/GuessEU/WC0001FMSWC-G5?wid=520&fmt=jpeg&qlt=80&op_sharpen=0&op_usm=1.0,1.0,5,0&iccEmbed=0",
+      "name": "Etiam gravida",
+      "price": 110
+    }
+  ],
+  "votes": [
+    {
+      "id": 1,
+      "point": 2,
+      "title": "accusamus beatae ad facilis cum similique qui sunt",
+      "content": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.",
+      "url": "https://via.placeholder.com/600/92c952",
+      "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+    },
+    {
+      "id": 2,
+      "point": 1,
+      "title": "reprehenderit est deserunt velit ipsam",
+      "content": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.",
+      "thumbnailUrl": "https://via.placeholder.com/150/771796"
+    },
+    {
+      "id": 8,
+      "point": 4,
+      "title": "officia porro iure quia iusto qui ipsa ut modi",
+      "content": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.",
+      "thumbnailUrl": "https://via.placeholder.com/150/24f355"
+    },
+    {
+      "id": 7,
+      "point": 1,
+      "title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
+      "content": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.",
+      "thumbnailUrl": "https://via.placeholder.com/150/d32776"
+    },
+    {
+      "id": 6,
+      "point": 9,
+      "title": "natus nisi omnis corporis facere molestiae rerum in",
+      "content": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.",
+      "thumbnailUrl": "https://via.placeholder.com/150/f66b97"
+    }
+  ],
+  "megamenu": [
+		{
+			"id": 1,
+			"label": "Features",
+			"link": "/features",
+			"content": {
+				"blockTop": "",
+				"blockBottom": "<div class=\"col-6\"><h5>Custom label</h5></div><div class=\"col-6\"><img src=\"http://m2.alothemes.com/milano/pub/media/wysiwyg/alothemes/static/img-mega.jpg\"></div>",
+				"width": 100,
+				"listColumn": [
+					{
+						"id": 1,
+						"label": "Column 1",
+						"link": "/column-1",
+						"columnWidth": 3,
+						"menuItems": [
+							{	
+								"id": 1,
+								"label": "Menu item 1",
+								"link": "/menu-item-1"
+							},
+							{
+								"id": 2,
+								"label": "Menu item 2",
+								"link": "/menu-item-2"
+							},
+							{
+								"id": 3,
+								"label": "Menu item 3",
+								"link": "/menu-item-3"
+							}
+						]
+					},
+					{
+						"id": 2,
+						"label": "Column 2",
+						"link": "/column-2",
+						"columnWidth": 3,
+						"menuItems": [
+							{
+								"id": 1,
+								"label": "Menu item 1",
+								"link": "/menu-item-1"
+							},
+							{
+								"id": 2,
+								"label": "Menu item 2",
+								"link": "/menu-item-2"
+							},
+							{
+								"id": 3,
+								"label": "Menu item 3",
+								"link": "/menu-item-3"
+							}
+						]
+					},
+					{
+						"id": 3,
+						"label": "Column 3",
+						"link": "/column-3",
+						"columnWidth": 3,
+						"menuItems": [
+							{
+								"id": 1,
+								"label": "Menu item 1",
+								"link": "/menu-item-1"
+							},
+							{
+								"id": 2,
+								"label": "Menu item 2",
+								"link": "/menu-item-2"
+							},
+							{
+								"id": 3,
+								"label": "Menu item 3",
+								"link": "/menu-item-3"
+							}
+						]
+					},
+					{
+						"id": 4,
+						"label": "Column 4",
+						"link": "/column-4",
+						"columnWidth": 3,
+						"menuItems": [
+							{
+								"id": 1,
+								"label": "Menu item 1",
+								"link": "/menu-item-1"
+							},
+							{
+								"id": 2,
+								"label": "Menu item 2",
+								"link": "/menu-item-2"
+							},
+							{
+								"id": 3,
+								"label": "Menu item 3",
+								"link": "/menu-item-3"
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"id": 2,
+			"label": "New Arrival",
+			"link": "/new-arrival",
+			"content": {
+				"blockTop": "<div class=\"col-6\"><h5>Custom label</h5></div><div class=\"col-6\"><img src=\"http://m2.alothemes.com/milano/pub/media/wysiwyg/alothemes/static/img-mega.jpg\"></div>",
+				"blockBottom": "",
+				"width": 50,
+				"listColumn": [
+					{
+						"id": 1,
+						"label": "Column 11",
+						"link": "/column-11",
+						"columnWidth": 3,
+						"menuItems": [
+							{	
+								"id": 1,
+								"label": "Menu item 1",
+								"link": "/menu-item-1"
+							},
+							{
+								"id": 2,
+								"label": "Menu item 2",
+								"link": "/menu-item-2"
+							},
+							{
+								"id": 3,
+								"label": "Menu item 3",
+								"link": "/menu-item-3"
+							}
+						]
+					},
+					{
+						"id": 2,
+						"label": "Column 22",
+						"link": "/column-22",
+						"columnWidth": 3,
+						"menuItems": [
+							{
+								"id": 1,
+								"label": "Menu item 1",
+								"link": "/menu-item-1"
+							},
+							{
+								"id": 2,
+								"label": "Menu item 2",
+								"link": "/menu-item-2"
+							},
+							{
+								"id": 3,
+								"label": "Menu item 3",
+								"link": "/menu-item-3"
+							}
+						]
+					}
+				]
+			}
+		}
+  ]
+}

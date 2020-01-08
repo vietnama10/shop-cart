@@ -1,159 +1,91 @@
-@mixin cart-list($min-height, $max-height, $height) {
-  .cart-list {
-    overflow-x: hidden;
-    min-height: $min-height;
-    max-height: $max-height;
-    height: $height;
-    margin: 0 0 10px 0;
-    padding: 0;
-    border-bottom: solid 2px $color-dark;
-    &::-webkit-scrollbar {
-      @include scrollbar;
-    }
-    &::-webkit-scrollbar-track {
-      @include scrollbar-track();
-    }
-    &::-webkit-scrollbar-thumb {
-      @include scrollbar-thumb();
-    }
-    &::-webkit-scrollbar-thumb:hover {
-      @include scrollbar-thumb-hover();
-    }
-    li {
-      margin: 5px 0 10px 0;
-      padding: 0 10px;
-      border-top: solid 1px $color-gray-light;
-      &:last-child {
-        border-bottom: solid 1px $color-gray-light;
-      }
-      * {
-        padding-left: 0;
-        margin: auto 0;
-      }
-      .item-action {
-        color: $color-dark;
-      }
-      .item-name {
-        small {
-          color: $color-gray;
+@import '_navbar';
+@import '_mega_menu';
+
+/** Navbar Responsive **/
+@include responsive_320 {
+  #root {
+    .navbar {
+      .navbar-brand {
+        margin: 0;
+        .logo{
+          width: 110px;
         }
       }
-    }
-    .cart-empty {
-      line-height: 70px;
-      text-align: center;
-      color: $color-gray;
+      .nav-links-mobile {
+        .mini-cart-container {
+          .cart-info {
+            max-width: 300px;
+            width: 300px;
+          }
+        }
+      }
     }
   }
 }
-
-.navbar {
-  box-shadow: 0px 0px 20px 0px $color-dark;
-  .navbar-brand {
-    .logo {
-      width: 150px;
+ 
+@include responsive_375 {
+  #root {
+    .navbar {
+      .navbar-brand {
+        margin: 0;
+        .logo{
+          width: 120px;
+        }
+      }
+      .nav-links-mobile {
+        .mini-cart-container {
+          .cart-info {
+            max-width: 300px;
+            width: 300px;
+          }
+        }
+      }
     }
   }
-  #navbarNav {
-    .navbar-nav {
-      margin: auto auto auto 15px;
-      .nav-item {
-        text-transform: uppercase;
-        :hover {
-          color: $color-white;
-        }
+}
+ 
+@include responsive_425 {
+
+}
+ 
+@include responsive_768 {
+  
+}
+ 
+@include responsive_992 {
+  #root {
+    .navbar {
+      #navbarNavMobile { 
+        display: none !important;
+      }
+      .nav-links-mobile {
+        display: none;
       }
     }
-    .mini-cart-container {
-      position: relative;
-      &:hover > .cart-info{
-        visibility: visible;
-        opacity: 1;
+  }
+}
+ 
+@include responsive_1024 {
+  #root {
+    .navbar {
+      #navbarNavMobile { 
+        display: none !important;
       }
-      .shopping-cart {
-        .fa-shopping-basket {
-          color: $color-white;
-          position: relative;
-          .shop-item-count {
-            position: absolute;
-            right: -12px;
-            top: -12px;
-            border-radius: 20px;
-            background: $color-pink-dark;
-            width: 20px;
-            height: 20px;
-            text-align: center;
-            line-height: 20px;
-            color: $color-white;
-            font-weight: 500;
-            font-size: 14px;
-          }
-        }
-        .fa-caret-up {
-          position: absolute;
-          bottom: -10px;
-          left: 15px;
-          font-size: 25px;
-          color: #fff;
-          z-index: 2;
-        }
-      }
-      .cart-info {
-        position: absolute;
-        visibility: hidden;
-        opacity: 0;
-        transition:visibility 0.4s linear,opacity 0.4s linear;
-        z-index: 1;
-        right: 0;
-        width: 350px;
-        background-color: $color-white;
-        padding: 10px;
-        border: solid 1px $color-gray-light;
-        @include box-shadow(0, 5px, 20px, 0, $color-dark);
-        .fa-caret-up {
-          position: absolute;
-          top: -15px;
-          font-size: 25px;
-          color: #fff;
-          right: 15px;
-        }
-        @include cart-list(70px, 350px, 85%);
-        .cart-total {
-          margin: 0;
-          * {
-            padding-left: 0;
-            margin: auto 0 0 0;
-          }
-          .btn-checkout {
-            text-decoration: none;
-            @include button-style(10px 15px, $color-pink-dark, 12px, $color-white);
-          }
-          strong {
-            color: $color-dark;
-          }
-        }
+      .nav-links-mobile {
+        display: none;
       }
     }
-    .user-links {
-      .nav-link {
-        color: $color-white;
+  }
+}
+ 
+@include responsive_1200 {
+  #root {
+    .navbar {
+      #navbarNavMobile { 
+        display: none !important;
       }
-      .links {
-        display: block;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 0.5s;
-        margin: 0;
-        border-radius: unset;
-        border: solid 1px $color-gray-light;
-        @include box-shadow(0, 5px, 20px, 0, $color-dark);
-        a {
-          padding: 5px 20px;
-        }
-      }
-      &:hover > .links{
-        visibility: visible;
-        opacity: 1;
+      .nav-links-mobile {
+        display: none;
       }
     }
   }

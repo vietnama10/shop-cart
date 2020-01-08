@@ -1,0 +1,14 @@
+.banner-slider {
+  .banner-item {
+    max-height: 400px;
+    overflow: hidden;
+    a {
+      display: inline-block;
+      width: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

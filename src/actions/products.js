@@ -1,6 +1,6 @@
-import * as types from '../constants/ActionTypes';
+import * as types from '../constants/ProductActionTypes';
 import { request } from '../utils/apiCaller';
-import {products as productsApiUrl} from '../constants/apiURL';
+import {products as productsApiUrl} from '../apis/apiURL';
 
 export const fetchProducts_Request = () => {
   return dispatch => {
@@ -24,12 +24,4 @@ export const deleteProducts = ids => ({
 
 export const editProduct = (id, product) => ({
   type: types.EDIT_PRODUCT, id, product
-})
-
-export const addToCart = (item, qty) => ({
-  type: types.ADD_TO_CART, item, qty
-})
-
-export const removeCartItem = itemId => ({
-  type: types.REMOVE_CART_ITEM, itemId
 })

@@ -1,18 +1,18 @@
 import {
   FETCH_PRODUCTS
-} from '../constants/ActionTypes';
+} from '../constants/ProductActionTypes';
 
 
-const initState = [];
+const initState = {
+  list: []
+};
 
 const products = (state = initState, action) => {
   switch (action.type) {
     case FETCH_PRODUCTS:
-      let products = action.products;
-      state = products;
-      return state;
+      return {...state, list: action.products};
     default: 
-      return state;
+      return {...state};
   }
 }
 

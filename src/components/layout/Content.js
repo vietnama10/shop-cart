@@ -8,8 +8,8 @@ import history from './../common/history';
 const Content = () => {
     return (
         <main className="container" id="main-content">
-          <Route path="/" exact component={HomePage} />
-          <Route path="/cart" exact component={CartPage} />
+          <Route path="/" exact component={HomePage} history={history}/>
+          <Route path="/cart" exact component={CartPage} history={history}/>
           <Route path="/login" exact component={LoginPage} history={history} />
         </main>
     )

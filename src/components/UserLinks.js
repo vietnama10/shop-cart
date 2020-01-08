@@ -1,12 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 
-const UserLinks = ({currentUser}) => {
-  if(currentUser.msg !== undefined) { 
+const UserLinks = ({currentUser, logOut}) => {
+  if(currentUser.name !== undefined) { 
     return (
       <div className="dropdown user-links">
         <div className="nav-link" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-          <span>Wellcome, {currentUser.msg.name.split("@")[0]}! </span>
+          <span>Wellcome, {currentUser.name}! </span>
           <i className="fas fa-user"></i>
         </div>
         <div className="dropdown-menu dropdown-menu-right links" aria-labelledby="dropdownMenuButton">
@@ -20,11 +20,11 @@ const UserLinks = ({currentUser}) => {
             &nbsp;
             <span>Shopping History</span>
           </Link>
-          <Link to="/logout" className="dropdown-item">
+          <span className="dropdown-item" onClick={() => logOut()}>
             <i className="fas fa-sign-out-alt"></i>
             &nbsp;
             <span>Login Out</span>
-          </Link>
+          </span>
         </div>
       </div>
     )

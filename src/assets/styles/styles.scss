@@ -30,7 +30,15 @@ $color-black-light: #00000040;
 
 $mobile-width: 480px; 
 $tablet-width: 768px; 
-$desktop-width: 1024px; 
+$desktop-width: 1024px;
+
+$font-size-h1: 32 px;
+$font-size-h2: 24 px;
+$font-size-h3: 18.72 px;
+$font-size-h4: 16 px;
+$font-size-h5: 13.28 px;
+$font-size-h6: 10.72 px;
+
 
 @mixin box-shadow($h_offset, $v_offset, $blur, $spread, $color) {
   box-shadow: $h_offset $v_offset $blur $spread $color;
@@ -82,14 +90,31 @@ $desktop-width: 1024px;
   background: $color-dark; 
 }
 
+@mixin list-style($color, $font-size, $padding, $margin) {
+  padding: 0;
+  margin: 0;
+  > li {
+    > a {
+      font-size: $font-size;
+      color: $color;
+      text-decoration: none !important;
+    }
+    list-style-type: none;
+    padding: $padding;
+    margin: $margin;
+  }
+}
+
 
 #main-content {
   min-height: 300px;
-  margin-top: 90px;
+  margin-top: 80px;
   margin-bottom: 20px;
 }
 
+@import '_responsive';
 @import '_header';
+@import '_banner';
 @import '_product';
 @import '_cart';
 @import '_login';
